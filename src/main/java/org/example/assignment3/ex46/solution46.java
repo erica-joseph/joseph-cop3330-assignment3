@@ -29,14 +29,17 @@ public class solution46 {
                 listOfLines.add(line); //go through the list of lines
                 line = bufReader.readLine(); //reading the line of each argument in the notepad
             }
-            Set<String> unique = new HashSet<String>(listOfLines);;
+            System.out.println(listOfLines);
+
+            Set<String> unique = new HashSet<String>(listOfLines);
             for (String s : unique) {
                 int total = Collections.frequency(listOfLines, s);
                 String stars = "";
                 for (int k = 0; k < total; k++) {
                     stars += "*";
-                    System.out.println(s + ": " +stars);
+
                 }
+                System.out.println(s + ": " +stars);
 
             }
 

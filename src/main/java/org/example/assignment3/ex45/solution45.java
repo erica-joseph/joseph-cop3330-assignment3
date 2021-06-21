@@ -7,12 +7,15 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class solution45 {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+        readingFirst("src/main/java/org/example/assignment3/ex45/exercise45_input.txt");
         replaceAll("src/main/java/org/example/assignment3/ex45/exercise45_input.txt", "utilize", "use");
 
     }
@@ -21,21 +24,19 @@ public class solution45 {
 
         Scanner output = new Scanner(System.in);//call in the scanner
         System.out.println("What would you like to name your new file?");//prompt user
-        String outputFile = "src/main/java/org/example/assignment3/ex45/" +output.next(); //denote the output file after taking input
+        String outputFile = "src/main/java/org/example/assignment3/ex45/" + output.next(); //denote the output file after taking input
         String oldContent = "";
 
         BufferedReader reader = null;
 
         FileWriter writer = null;
 
-        try
-        {
+        try {
             reader = new BufferedReader(new FileReader("src/main/java/org/example/assignment3/ex45/exercise45_input.txt"));
 
             String line = reader.readLine();
 
-            while (line != null)
-            {
+            while (line != null) {
                 oldContent = oldContent + line + System.lineSeparator();
 
                 line = reader.readLine();
@@ -47,26 +48,38 @@ public class solution45 {
             writer = new FileWriter(outputFile);
 
             writer.write(newContent);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
+        } finally {
+            try {
 
                 reader.close();
 
                 writer.close();
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
     }
-}
 
+    public static void readingFirst(String fileName) {
+
+        try {
+            BufferedReader bufReader = new BufferedReader(new FileReader(fileName));
+            ArrayList<String> listOfLines = new ArrayList<>();
+            String line = bufReader.readLine();
+            System.out.print("\"...");
+            while (line != null) {
+                listOfLines.add(line);
+                line = bufReader.readLine();
+                System.out.println(line);
+            }
+            bufReader.close();
+            System.out.print("...\"");
+            System.out.println("\n");
+        } catch (Exception e) {
+
+        }
+    }
+}
