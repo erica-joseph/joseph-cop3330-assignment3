@@ -4,13 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import com.deitel.ch17.AccountRecord;
-
 
 public class solution42 {
 
     public static void main(String[] args) throws Exception{
-        reader("C:\\Users\\erica\\Documents\\OOP\\WarmUp\\src\\main\\java\\org\\example\\idolExample\\ex42\\exercise42_input.txt"); //inser the file into the function
+        reader("src/main/java/org/example/assignment3/ex42/exercise42_input.txt"); //inser the file into the function
     }//end main
 
     public static void reader (String filename){

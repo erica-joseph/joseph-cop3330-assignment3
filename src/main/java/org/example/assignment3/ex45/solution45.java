@@ -10,15 +10,15 @@ public class solution45 {
 
     public static void main(String[] args)
     {
-        replaceAll("C:\\Users\\erica\\Documents\\OOP\\WarmUp\\src\\main\\java\\exercise45_input.txt", "utilize", "use");
+        replaceAll("src/main/java/org/example/assignment3/ex45/exercise45_input.txt", "utilize", "use");
 
     }
 
-    static void replaceAll(String filePath, String original, String modified)
-    {
-        Scanner output = new Scanner(System.in);
-        System.out.println("What would you like to name your new file?");
-        String outputFile = "C:\\Users\\erica\\Documents\\OOP\\WarmUp\\src\\main\\java\\" +output.next();
+    static void replaceAll(String filePath, String original, String modified) {
+
+        Scanner output = new Scanner(System.in);//call in the scanner
+        System.out.println("What would you like to name your new file?");//prompt user
+        String outputFile = "src/main/java/org/example/assignment3/ex45/" +output.next(); //denote the output file after taking input
         String oldContent = "";
 
         BufferedReader reader = null;
@@ -27,7 +27,7 @@ public class solution45 {
 
         try
         {
-            reader = new BufferedReader(new FileReader("C:\\Users\\erica\\Documents\\OOP\\WarmUp\\src\\main\\java\\exercise45_input.txt"));
+            reader = new BufferedReader(new FileReader("src/main/java/org/example/assignment3/ex45/exercise45_input.txt"));
 
             String line = reader.readLine();
 
