@@ -31,8 +31,6 @@ public class solution46 {
             }
 
             Set<String> unique = new HashSet<String>(listOfLines);
-            Object[] mStringArray = listOfLines.toArray();
-
             for (String s : unique) {
                 int total = Collections.frequency(listOfLines, s);
                 String stars = "";
