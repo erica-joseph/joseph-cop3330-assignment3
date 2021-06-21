@@ -1,5 +1,8 @@
 package org.example.assignment3.ex43;
-
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Erica Joseph
+ */
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -38,13 +41,10 @@ public class solution43 {
 
         boolean bool = website.mkdir();
 
-        System.out.println("What would you like to name the file?");
-
-        File fileIndex = new File(website+file);
+        File fileIndex = new File(website+file); //file destination
 
 
-        try {
-
+        try { //try
 
             System.out.println(fileIndex);
             if (!fileIndex.exists()) {
@@ -53,8 +53,10 @@ public class solution43 {
 
             FileWriter fw = new FileWriter(fileIndex);
             bw = new BufferedWriter(fw);
-            String content = "<!DOCTYPE html> \n<html>\n <head>\n<title> "+ folder + "</title>\n<meta author=\""+author+"\">\n <style>\n</style>\n</meta>\n</head>\n<body>\n</body>\n</html>";
-            bw.write(content);
+
+                String content = "<!DOCTYPE html> \n<html>\n <head>\n<title> " + folder + "</title>\n<meta author=\"" + author + "\">\n <style>\n</style>\n</meta>\n</head>\n<body>\n</body>\n</html>";
+                bw.write(content);
+
             bw.close();
 
         } catch (IOException ioe) {

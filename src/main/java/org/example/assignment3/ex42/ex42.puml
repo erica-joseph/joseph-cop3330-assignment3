@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+person ->FirstName
+Lastname -> Salary
+@enduml

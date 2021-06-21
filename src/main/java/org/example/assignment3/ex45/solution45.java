@@ -1,5 +1,8 @@
 package org.example.assignment3.ex45;
-
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Erica Joseph
+ */
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;

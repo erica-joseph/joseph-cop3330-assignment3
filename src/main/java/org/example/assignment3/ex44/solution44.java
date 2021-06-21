@@ -4,12 +4,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Erica Joseph
+ */
 import java.io.File;
 import java.io.*;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 /*
@@ -23,7 +27,11 @@ When the file is found, printout the attrbutes in the line
 public class solution44 {
     public static void main(String[] args) {
 
-        File input = new File("C:\\Users\\erica\\Documents\\OOP\\WarmUp\\src\\main\\java\\org\\example\\idolExample\\ex44\\exercise44_input.json");
+        File input = new File("src/main/java/org/example/assignment3/ex44/exercise44_input.json");
+
+        Scanner inputName = new Scanner(System.in);
+        System.out.print("What is the product name? ");
+
         try {
             JsonElement fileElement = JsonParser.parseReader(new FileReader(input));
             JsonObject fileObject = fileElement.getAsJsonObject();
@@ -45,9 +53,20 @@ public class solution44 {
                 //if(productJsonObject.equals)
             }
 
+            if(inputName.equals("Widget")){
+                System.out.printf(" ");
+            }
+            if(inputName.equals("Thing")){
+                System.out.printf(" ");
+            }
+            if(inputName.equals("Doodad")){
+                System.out.printf(" ");
+            }
+
             //print out
 
-            //System.out.printf("Name: %s\n Price: %.2f\n Quantity: %d", product.name, product.price, product.quantity);
+
+            //System.out.printf("Name: %s\n Price: %.2f\n Quantity: %d", product.toString() );
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
