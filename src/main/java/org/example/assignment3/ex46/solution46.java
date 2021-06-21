@@ -30,6 +30,8 @@ public class solution46 {
                 line = bufReader.readLine(); //reading the line of each argument in the notepad
             }
 
+
+
             Set<String> unique = new HashSet<String>(listOfLines);
             for (String s : unique) {
                 int total = Collections.frequency(listOfLines, s);
