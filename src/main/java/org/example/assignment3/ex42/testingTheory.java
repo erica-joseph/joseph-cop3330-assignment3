@@ -23,15 +23,16 @@ public class testingTheory {
                 for (String s : words) { //for each s
                     finishTest.add(s);
                 }
+                String stars = "";
                 for (String s : finishTest) {
                     int total = Collections.frequency(finishTest, s);
-                    String stars = "";
+
                     for (int k = 0; k < total; k++) {
                         stars += "*";
 
                     }
-                    System.out.println(s + ": " + stars);
                 }
+                System.out.println( ": " + stars);
             }
 
         } catch (Exception e) {
