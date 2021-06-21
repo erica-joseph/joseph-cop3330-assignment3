@@ -29,9 +29,10 @@ public class solution46 {
                 listOfLines.add(line); //go through the list of lines
                 line = bufReader.readLine(); //reading the line of each argument in the notepad
             }
-            System.out.println(listOfLines);
 
             Set<String> unique = new HashSet<String>(listOfLines);
+            Object[] mStringArray = listOfLines.toArray();
+
             for (String s : unique) {
                 int total = Collections.frequency(listOfLines, s);
                 String stars = "";
